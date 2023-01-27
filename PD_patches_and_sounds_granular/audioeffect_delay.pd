@@ -1,0 +1,35 @@
+#N canvas 858 102 581 408 12;
+#X obj 255 47 inlet~;
+#X floatatom 281 169 5 0 0 0 - - - 0;
+#X obj 281 195 delread~ audio-buffer 0;
+#X obj 284 321 *~;
+#X obj 350 292 hsl 128 15 0 1 0 0 empty empty delay\\\ volume -2 -8
+0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 284 345 outlet~;
+#X obj 62 174 outlet~;
+#X obj 62 130 *~;
+#X obj 84 84 hsl 128 15 0 1 0 0 empty empty original\\\ signal\\\ gain
+-2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 81 104 5 0 0 0 - - - 0;
+#X obj 280 119 loadbang;
+#X obj 349 228 loadbang;
+#X msg 349 252 0.75;
+#X obj 82 25 loadbang;
+#X msg 82 49 0.75;
+#X msg 281 143 743;
+#X obj 255 89 delwrite~ audio-buffer 1000;
+#X connect 0 0 7 0;
+#X connect 0 0 16 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 1;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 7 1;
+#X connect 10 0 15 0;
+#X connect 11 0 12 0;
+#X connect 12 0 4 0;
+#X connect 13 0 14 0;
+#X connect 14 0 8 0;
+#X connect 15 0 1 0;

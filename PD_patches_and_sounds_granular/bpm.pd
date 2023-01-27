@@ -1,0 +1,19 @@
+#N canvas 627 165 717 459 12;
+#X text 217 43 BPM;
+#X obj 171 86 loadbang;
+#X msg 171 114 60000;
+#X floatatom 292 138 5 0 0 0 - bpmVal - 0;
+#X text 356 138 bpm number;
+#X text 57 115 ms in a minute;
+#X obj 274 230 /;
+#X floatatom 274 254 5 0 0 0 - - - 0;
+#X obj 273 175 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 274 277 send quarter_time;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 8 0;
+#X connect 3 0 6 1;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 8 0 6 0;
